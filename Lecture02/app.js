@@ -13,7 +13,7 @@ function keyUp(event) {
   calculateNumericOutput();
 }
 
-function calculateNumericOutput() {
+function calculateNumericOutput() { 
   student.name = document.getElementById('name').value;
 
   var totalNameValue = 0;
