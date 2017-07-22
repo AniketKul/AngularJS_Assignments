@@ -8,7 +8,7 @@ angular.module('ShoppingListApp', [])
 
 Config.$inject = ['ShoppingListProvider'];
 function Config(ShoppingListProvider) {
-  ShoppingListProvider.defaults.maxItems = 5;
+  ShoppingListProvider.defaults.maxItems = 2;
 }
 
 ShoppingListController.$inject = ['ShoppingList'];

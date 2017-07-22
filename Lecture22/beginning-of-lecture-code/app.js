@@ -1,11 +1,20 @@
-(function () {
+ (function () {
 'use strict';
 
 angular.module('ShoppingListApp', [])
 .controller('ShoppingListController', ShoppingListController)
-.provider('ShoppingListService', ShoppingListServiceProvider);
+.provider('ShoppingListService', ShoppingListServiceProvider)
+.config(Configu);
+
+Configu.$inject = ['ShoppingListServiceProvider'];
+
+function Configu(ShoppingListServiceProvider){
+  //Save Aniket from himself
+  ShoppingListServiceProvider.defaults.maxItems = 2;
+}
 
 ShoppingListController.$inject = ['ShoppingListService'];
+
 function ShoppingListController(ShoppingListService) {
   var list = this;
 
